@@ -7,11 +7,15 @@
     </p>
 
     <p>
-      <%= form.label :description %>
-      <%= form.text_area :description %>
+      <%= form.label :text %>
+      <%= form.text_area :text %>
     </p>
 
     <p>
       <%= form.submit %>
     </p>
 <% end %>
+
+<p>
+  <%= link_to 'Back to Article list', articles_path %>
+</p>

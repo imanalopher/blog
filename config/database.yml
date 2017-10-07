@@ -1,0 +1,27 @@
+development:
+  host: localhost
+  adapter: postgresql
+  encoding: utf8
+  database: rails_blog
+  pool: 5
+  username: root
+  password: root
+
+test:
+  host: localhost
+  adapter: postgresql
+  encoding: utf8
+  database: rails_blog
+  pool: 5
+  username: root
+  password: root
+
+
+production:
+  host: localhost
+  adapter: postgresql
+  encoding: utf8
+  database: rails_blog
+  pool: 5
+  username: root
+  password: root

@@ -1,10 +1,17 @@
 class ArticlesController < ApplicationController
+  def search
+    name = params[:q]
+    if name.nil?
+      name = ''
+    end
+    @articles = Article.where(["title LIKE ? ", "%" + name + "%"]).page(params[:page]).per(10)
+  end
   def new
     @article = Article.new
   end
 
   def index
-    @articles = Article.all
+    @articles = Article.page(params[:page]).per(10)
   end
 
   def create

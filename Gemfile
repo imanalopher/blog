@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.1.4'
 gem 'kaminari'
 gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'jquery-rails'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-  root 'welcome#index'
+  root 'articles#index'
   get 'articles/search' => 'articles#search'
   resources :articles do
     resources :comments

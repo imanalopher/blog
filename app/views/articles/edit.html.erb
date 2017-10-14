@@ -1,5 +1,11 @@
-<h1>Edit article</h1>
+<% content_for :title do %>
+    Show article - <%= @article.title %>
+<% end %>
 
-<%= render 'form' %>
+<% content_for :body do %>
+    <h1>Edit article</h1>
 
-<%= link_to 'Back', articles_path %>
+    <%= render 'form' %>
+
+    <%= link_to 'Back', articles_path %>
+<% end %>

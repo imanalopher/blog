@@ -8,6 +8,11 @@
     </p>
 
     <p>
+      <strong>Image:</strong>
+      <%= image_tag @article.avatar.url(:medium), class: "d-flex align-self-start mr-3", alt: @article.title %>
+    </p>
+
+    <p>
       <strong>Text:</strong>
       <%= @article.text %>
     </p>

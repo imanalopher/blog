@@ -3,7 +3,7 @@
 
     <% @articles.each do |article| %>
         <div class="media">
-          <img class="d-flex align-self-start mr-3" src="https://files.foodietrip.com/bundles/frontpage/img/im34.jpg" alt="Generic placeholder image">
+          <%= image_tag article.avatar.url(:medium) , class: "d-flex align-self-start mr-3", alt: article.title %>
           <div class="media-body">
             <h5 class="mt-0"><%= article.title %></h5>
             <p><%= article.text %></p>

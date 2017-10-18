@@ -12,6 +12,7 @@ gem 'kaminari'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'jquery-rails'
 gem 'devise'
+gem "paperclip", "~> 5.0.0"
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server

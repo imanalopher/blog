@@ -1,6 +1,6 @@
 development:
   host: localhost
-  adapter: postgresql
+  adapter: mysql2
   encoding: utf8
   database: rails_blog
   pool: 5
@@ -9,7 +9,7 @@ development:
 
 test:
   host: localhost
-  adapter: postgresql
+  adapter: mysql2
   encoding: utf8
   database: rails_blog
   pool: 5
@@ -19,7 +19,7 @@ test:
 
 production:
   host: localhost
-  adapter: postgresql
+  adapter: mysql2
   encoding: utf8
   database: rails_blog
   pool: 5

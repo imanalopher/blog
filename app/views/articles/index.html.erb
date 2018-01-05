@@ -1,20 +1,23 @@
 <% content_for :body do %>
     <h1>Listing articles</h1>
 
-    <% @articles.each do |article| %>
-        <div class="media">
-          <%= image_tag article.avatar.url(:medium) , class: "d-flex align-self-start mr-3", alt: article.title %>
-          <div class="media-body">
-            <h5 class="mt-0"><%= article.title %></h5>
-            <p><%= article.text %></p>
-            <p><%= link_to 'Show', article_path(article) %></p>
-            <p><%= link_to 'Destroy', article_path(article),
-                            method: :delete,
-                            data: { confirm: 'Are you sure?' } %></p>
-          </div>
-        </div>
+    <% cache @articles do %>
+
+        <% @articles.each do |article| %>
+            <div class="media">
+              <%= image_tag article.avatar.url(:medium) , class: "d-flex align-self-start mr-3", alt: article.title %>
+              <div class="media-body">
+                <h5 class="mt-0"><%= article.title %></h5>
+                <p><%= article.text %></p>
+                <p><%= link_to 'Show', article_path(article) %></p>
+                <p><%= link_to 'Destroy', article_path(article),
+                                method: :delete,
+                                data: { confirm: 'Are you sure?' } %></p>
+              </div>
+            </div>
+        <% end %>
+        <%= paginate @articles, window: 3 %>
     <% end %>
-    <%= paginate @articles, window: 3 %>
     <p>
       <%= link_to 'Create new Article', new_article_path %>
     </p>
